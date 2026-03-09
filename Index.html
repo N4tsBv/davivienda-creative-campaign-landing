@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/svg" href="./maquetacion/assets/svg/heart.svg">
+    <title>Prueba WMJ</title>
+    <!-- Tipografia -->
+    <link
+        href="https://recursos-digitales.davivienda.com/projects/assets_generales/fuente-davivienda/webkit/kitDavcss2.css"
+        rel="stylesheet" />
+    <!-- Theme Tailwind + Clases reutilizables -->
+    <style type="text/tailwindcss">
+        @theme {
+            --font-dv: "davregular", "sans-serif";
+            --font-dv-bold: "davbold", "sans-serif";
+            --font-dv-extrabold: "davextrabold", "sans-serif";
+            --font-dv-extrabold-italic: "davextrabold_italic", "sans-serif";
+            --font-dv-italic: "davitalic", "sans-serif";
+            --font-dv-bold-italic: "davbold_italic", "sans-serif";
+            --font-dv-light: "davlight", "sans-serif";
+            /* Rojo */
+            --color-rojo-100: #ed1c27;
+            --color-rojo-300: #8d191b;
+            /* Grises */
+            --color-gris-50: #f7f7f7;
+            --color-gris-100: #575757;
+            --color-gris-200: #444444;
+            --color-gris-300: #282828;
+        }
+
+        /* ===== Estilos base ===== */
+        body {
+            @apply text-gris-300 text-center bg-gris-50;
+        }
+        p {
+            @apply text-base;
+        }
+        h1 {
+            @apply text-6xl font-dv-extrabold ;
+        }
+        h2 {
+            @apply text-xl font-dv-bold;
+        }
+        h3 {
+            @apply text-lg font-dv-bold;
+        }
+        h4 {
+            @apply font-dv-bold;
+        }
+       
+        ul {
+            @apply list-disc list-inside;
+        }
+
+        /* ===== Layout ===== */
+        .container-main {
+            @apply max-w-7xl mx-auto px-4;
+        }
+
+        /* ===== Tipografia ===== */
+        .section-title {
+            @apply text-3xl text-left;
+        }
+        .section-subtitle {
+            @apply max-w-2xl text-left text-gris-100;
+        }
+        
+        /* ===== Componentes ===== */
+        .header-card {
+            @apply flex flex-col items-start justify-end h-[100px] lg:h-[400px] rounded-lg md:rounded-t-3xl  drop-shadow-xl hover:scale-103 transition-transform duration-300;
+        }
+        .text-content {
+            @apply text-justify text-pretty;
+        }
+        .number-card {
+            @apply text-gris-100 bg-white rounded-bl-lg rounded-tr-3xl drop-shadow-xl p-4;
+        }
+        .design-card {
+            @apply flex flex-col pb-6 items-center justify-center gap-3 bg-white rounded-md drop-shadow-xl hover:scale-103 transition-transform duration-300;
+        }
+        .button-link {
+            @apply bg-gris-200 px-4 py-2 text-sm rounded-full text-white font-dv-bold hover:bg-gris-300 transition-colors cursor-pointer text-lg hover:scale-103 transition-transform duration-300 ease-in-out;
+        }
+        .a-link {
+            @apply px-6 py-2 text-sm text-gris-200 font-dv-bold-italic underline hover:text-gris-300 transition-colors cursor-pointer text-lg hover:scale-103 transition-transform duration-300 ease-in-out;
+        }
+        .faq-item {
+            @apply border-b border-gris-100/30 py-5 cursor-pointer text-left;
+        }
+        .image-card {
+            @apply relative h-[200px] w-full overflow-hidden rounded-t-lg;
+        }
+        .btn-scroll-top {
+            @apply fixed bottom-6 right-6 z-50 w-12 h-12 bg-gris-200 hover:bg-gris-300 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 opacity-0 pointer-events-none;
+        }
+        .btn-scroll-top.visible {
+            @apply opacity-100 pointer-events-auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <section id="beneficios" class="py-16">
+            <div class="container-main">
+                <div class="mb-16">
+                <h1 class="text-left ">Prueba WMJ</h1>
+                <p class="text-gris-100 text-left italic">Nataly Bernal</p>
+                </div>
+                <div class="flex grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-3">
+                    <!-- Card 1 -->
+                    <a href="#investigacion" class="flex flex-col gap-3 md:gap-6">
+                        <div class="header-card min-w-[80%] bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('./maquetacion/assets/jpg/bg-cards_1.jpg');">
+                            <h1 class="number-card">1</h1>
+
+                        </div>
+                        <h2 class="section-subtitle">Investigación</h2>
+                    </a>
+                    <!-- Card 2-->
+                    <a href="#diseno" class="flex flex-col gap-3 md:gap-6">
+                        <div class="header-card min-w-[80%] bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('./maquetacion/assets/jpg/bg-cards_2.jpg');">
+                            <h1 class="number-card">2</h1>
+
+                        </div>
+                        <h2 class="section-subtitle">Diseño</h2>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="#maquetacion" class="flex flex-col gap-3 md:gap-6">
+                        <div class="header-card min-w-[80%] bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('./maquetacion/assets/jpg/bg-cards_3.jpg');">
+                            <h1 class="number-card">3</h1>
+
+                        </div>
+                        <h2 class="section-subtitle">Maquetación</h2>
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="#liderazgo" class="flex flex-col gap-3 md:gap-6">
+                        <div class="header-card min-w-[80%] bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('./maquetacion/assets/jpg/bg-cards_4.jpg');">
+                            <h1 class="number-card">4</h1>
+
+                        </div>
+                        <h2 class="section-subtitle">Liderazgo</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- Fase de Investigacion -->
+        <section id="investigacion" class="py-16 bg-white">
+            <div class="container-main">
+                <h2 class="section-title pb-16">1. Fase de Investigación</h2>
+                <div class="lg:flex flex-col-2 gap-12">
+                    <div class="flex flex-col gap-6">
+                        <!-- Contexto del proyecto -->
+                        <div class="flex flex-col gap-6">
+                            <h2 class="section-subtitle">Contexto del proyecto</h2>
+                            <div class="flex flex-col-2 gap-2">
+                                <p><b>Segmento:</b> Jóvenes</p>
+                                <p><b>Producto:</b> Crédito de Vivienda</p>
+                            </div>
+                            <p class="text-content">Davivienda quiere contarle a los jóvenes entre 22 y 29 años que ya
+                                tienen solvencia económica
+                                y
+                                que piensan en independizarse, que existe un Crédito de Vivienda que se puede solicitar
+                                fácilmente en 5 minutos desde la App Davivienda. Con un gran beneficio de rebaja del 10%
+                                en
+                                tasas preferenciales para que adquieran su primera vivienda.</p>
+                        </div>
+                        <!-- Público objetivo -->
+                        <div class="flex flex-col gap-6">
+                            <h2 class="section-subtitle">Público objetivo</h2>
+                            <p class="text-content">Jóvenes adultos digitalizados que gestionan sus finanzas desde el
+                                entorno móvil y valoran
+                                procesos ágiles, simples y 100% digitales.
+
+                                Cuentan con capacidad de ahorro, pero priorizan experiencias y bienestar personal
+                                mientras
+                                construyen estabilidad. Para ellos, adquirir vivienda representa un logro de
+                                independencia y
+                                validación personal más que una obligación tradicional.
+
+                                Buscan espacios que respondan a su estilo de vida flexible, autónomo y contemporáneo.
+                            </p>
+                        </div>
+                        <!-- Problema identificado -->
+                        <div class="flex flex-col gap-6">
+                            <h2 class="section-subtitle">Problema identificado</h2>
+
+                            <p class="text-content">El crédito hipotecario es percibido como un proceso complejo y
+                                reservado para “adultos
+                                grandes”.
+
+                                Este segmento, aunque ya es independiente, aún siente que no domina del todo las
+                                dinámicas
+                                financieras tradicionales, lo que genera inseguridad y postergación en la decisión de
+                                compra.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6 mt-6 lg:mt-0">
+
+                        <!-- Insights -->
+                        <div class="flex flex-col gap-6">
+                            <h2 class="section-subtitle">Insight – “Cuando sea grande”</h2>
+                            <div class="flex flex-col lg:flex-row items-center gap-6">
+                                <img src="./maquetacion/assets/png/img_joven.png" alt="" class="w-24 lg:w-1/4">
+                                <p class="text-content">Crecimos imaginando que <b>“cuando fuéramos grandes”
+                                    </b>llegarían metas como tener casa
+                                    propia
+                                    e
+                                    independencia real.
+
+                                    Hoy ya somos adultos: trabajamos, pagamos cuentas y tomamos decisiones importantes.
+                                    Sin
+                                    embargo, seguimos esperando sentirnos completamente preparados para dar el siguiente
+                                    paso.
+
+                                    La adultez no llega de forma mágica; se construye con decisiones.
+                                    El crédito se convierte en la herramienta que facilita ese avance hacia la
+                                    independencia.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Concepto Central -->
+                        <div class="flex flex-col gap-6">
+                            <h2 class="section-subtitle">Concepto Central</h2>
+                            <div>
+                                <h3 class="section-subtitle">Ese “Cuando sea grande”¡es hoy!</h3>
+                                <p class="text-content">
+                                    <i>Empoderar</i>
+                                    Eliminar la percepción de que adquirir vivienda es una decisión reservada para una
+                                    etapa
+                                    de
+                                    vida
+                                    posterior. Posicionar el crédito como una meta posible hoy.
+
+
+                                    <br> <i>Generar confianza</i>
+                                    Transmitir simplicidad y respaldo a través de una solicitud 100% digital en 5
+                                    minutos,
+                                    reduciendo la fricción y la percepción de complejidad.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Concepto Creativo -->
+                        <div class="flex flex-col gap-6">
+                            <h2 class="section-subtitle">Concepto Creativo</h2>
+                            <img src="./maquetacion/assets/svg/titulo.svg" alt="" class="w-64 mx-auto">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+
+            </div>
+
+        </section>
+        <!-- Fase de Diseño -->
+        <section id="diseno" class="py-16">
+            <div class="container-main">
+                <h2 class="section-title pb-16">Fase de Diseño</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="design-card flex flex-col gap-6 min-w-[80%] ">
+                        <div class="image-card">
+                            <a href="./maquetacion/assets/jpg/kv_cuandoseagrande.jpg" target="_blank"> <img
+                                    src="./maquetacion/assets/jpg/kv_cuandoseagrande.jpg" alt="Kv">
+                                <div class="absolute inset-0 bg-black/70"></div>
+                            </a>
+                        </div>
+                        <h2>Pieza KV</h2>
+                        <a href="./maquetacion/assets/jpg/kv_cuandoseagrande.jpg" target="_blank"
+                            class="button-link">Ver
+                            pieza
+                            gráfica</a>
+                    </div>
+                    <!-- Card 2-->
+                    <div class="design-card flex flex-col gap-6 min-w-[80%] ">
+                        <div class="image-card">
+                            <a href="./maquetacion/assets/jpg/mail_cuandoseagrande.jpg" target="_blank"> <img
+                                    src="./maquetacion/assets/jpg/mail_cuandoseagrande.jpg" alt="Kv">
+                                <div class="absolute inset-0 bg-black/70"></div>
+                            </a>
+                        </div>
+                        <h2>Mail</h2>
+                        <a href="./maquetacion/assets/jpg/mail_cuandoseagrande.jpg" target="_blank"
+                            class="button-link">Ver
+                            pieza
+                            gráfica</a>
+
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="design-card flex flex-col gap-6 min-w-[80%] ">
+                        <div class="image-card">
+                            <a href="./maquetacion/assets/jpg/pwm_desktop.jpg" target="_blank"> <img
+                                    src="./maquetacion/assets/jpg/pwm_desktop.jpg" alt="Kv">
+                                <div class="absolute inset-0 bg-black/70"></div>
+                            </a>
+                        </div>
+                        <h2>Landing Page Desktop</h2>
+                        <a href="./maquetacion/assets/jpg/pwm_desktop.jpg" target="_blank" class="button-link">Ver pieza
+                            gráfica</a>
+
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="design-card flex flex-col gap-6 min-w-[80%] ">
+                        <div class="image-card">
+                            <a href="./maquetacion/assets/jpg/pwm_mobile.jpg" target="_blank"> <img
+                                    src="./maquetacion/assets/jpg/pwm_mobile.jpg" alt="Kv">
+                                <div class="absolute inset-0 bg-black/70"></div>
+                            </a>
+                        </div>
+                        <h2>Landing Page Mobile</h2>
+                        <a href="./maquetacion/assets/jpg/pwm_mobile.jpg" target="_blank" class="button-link">Ver pieza
+                            gráfica</a>
+
+                    </div>
+                </div>
+        </section>
+        <!-- Fase de Maquetación -->
+        <section id="maquetacion" class="py-16 bg-white">
+            <div class="container-main">
+                <h2 class="section-title pb-16">Fase de Maquetación</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1-->
+                    <div class="design-card flex flex-col gap-6 min-w-[80%] ">
+                        <img src="./maquetacion/assets/png/mockup_mail.png" alt="Aprobación" class="w-3/4
+                     mx-auto">
+                        <h2>Mail</h2>
+                        <a href="./Maquetacion/mail/Mail-Dav.html" target="_blank" class="button-link">Ver
+                            implementación</a>
+
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="design-card flex flex-col gap-6 min-w-[80%] ">
+                        <img src="./maquetacion/assets/png/mockup_landing.png" alt="Aprobación" class="w-3/4
+                     mx-auto">
+                        <h2>Landing Page</h2>
+                        <a href="./Maquetacion/landing/Landing-Dav.html" target="_blank" class="button-link">Ver
+                            implementación</a>
+                    </div>
+                </div>
+        </section>
+        <!-- Fase de Liderazgo -->
+        <section id="liderazgo" class="py-16 ">
+            <div class="container-main">
+                <h2 class="section-title pb-16">Fase de Liderazgo</h2>
+                <div>
+                    <!-- pregunta 1 -->
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="flex items-center justify-between gap-4">
+                            <div>
+                                <h3>
+                                    1. Calidad de entregables
+                                </h3>
+                                <div class="faq-answer hidden mt-3 flex flex-col gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <h4> ¿Qué aspectos revisarías siempre antes de dar una
+                                            pieza por finalizada?
+                                        </h4>
+                                        <ul>
+                                            <li>Que el tipo de pieza corresponda a lo solicitado en el brief.</li>
+                                            <li>La composición, jerearquia y legibilidad.</li>
+                                            <li>El cumplimiento del manual de marca (Tono, legales, tipografías, colores, etc).</li>
+                                            <li>Ortografía y redacción básica.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿Cómo aseguras coherencia visual y correcta
+                                            aplicación de marca?
+                                        </h4>
+                                        <ul>
+                                            <li>Partiendo siempre del manual de marca como base. Verificando el uso
+                                                correcto
+                                                de tipografías, colores, imagenes, tono de comunicación, etc.</li>
+                                            <li>Las comunicaciones deben responder al objetivo de comunicación y no solo
+                                                a
+                                                criterios estéticos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./maquetacion/assets/svg/plus-circle.svg" alt=""
+                                class="faq-icon w-7 h-7 shrink-0 transition-transform">
+                        </div>
+                    </div>
+                    <!-- pregunta 2 -->
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="flex items-center justify-between gap-4">
+                            <div>
+                                <h3>
+                                    2. Orden y buenas prácticas
+                                </h3>
+                                <div class="faq-answer hidden mt-3 flex flex-col gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿Qué criterios aplicas para priorizar la entrega de piezas
+                                            según el orden de prioridad?
+                                        </h4>
+                                        <ul>
+                                            <li>Fechas limites establecidas.</li>
+                                            <li>Complejidad de la entrega.</li>
+                                            <li>La dependencia entre tareas.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿Cómo aseguras un flujo de trabajo ordenado y eficiente?
+                                        </h4>
+                                        <ul>
+                                            <li>Definiendo prioridades y etapas de trabajo, además estableciendo tiempos
+                                                realistas para cada etapa de trabajo.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./maquetacion/assets/svg/plus-circle.svg" alt=""
+                                class="faq-icon w-7 h-7 shrink-0 transition-transform">
+                        </div>
+                    </div>
+                    <!-- pregunta 3 -->
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="flex items-center justify-between gap-4">
+                            <div>
+                                <h3>
+                                    3. Feedback y acompañamiento
+                                </h3>
+                                <div class="faq-answer hidden mt-3 flex flex-col gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿Cómo darías feedback a un diseñador junior sin
+                                            desmotivarlo?
+                                        </h4>
+                                        <ul>
+                                            <li>Reconocer primero los aciertos antes de señalar mejoras.</li>
+                                            <li>Enfocar el feedback en la pieza, no hacerlo personal.</li>
+                                            <li>Explicar el criterio detrás del ajuste (marca, objetivo, jerarquía), no
+                                                puede ser un ajuste subjetivo.</li>
+                                            <li>Proponer soluciones o ejemplos de guía.</li>
+                                            <li>Tono de comunicación amable.</li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿Qué harías si un diseñador repite errores de forma
+                                            constante?
+                                        </h4>
+                                        <ul>
+                                            <li>Plan de trabajo para identificar areas de dificultad.</li>
+                                            <li>Reforzar el mensaje con referencias y ejemplos claros.</li>
+                                            <li>Plantear espacios de acompñamiento para identificar donde esta el error.
+                                            </li>
+                                            <li>Confirmar que comprendió el criterio y no solo la corrección de un
+                                                contexto especifico.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./maquetacion/assets/svg/plus-circle.svg" alt=""
+                                class="faq-icon w-7 h-7 shrink-0 transition-transform">
+                        </div>
+                    </div>
+                    <!-- pregunta 4 -->
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="flex items-center justify-between gap-4">
+                            <div>
+                                <h3>
+                                    4. Herramientas y automatización
+                                </h3>
+                                <div class="faq-answer hidden mt-3 flex flex-col gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿Qué herramientas (IA o no) usarías para apoyar
+                                            revisiones, ajustes rápidos o control de calidad?
+                                        </h4>
+                                        <ul>
+                                            <li>En fase de diseño web, usar Figma para comentarios y feedback.</li>
+                                            <li>Editores de codigo con Ia integrada (Vs Code, Cursor), etc.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿Qué tareas automatizarías para ahorrar tiempo al
+                                            equipo?
+                                        </h4>
+                                        <ul>
+                                            <li>Creación de plantillas base para piezas recurrentes.</li>
+                                            <li>Crear componentes web transversales para reutilizar en los proyectos.
+                                            </li>
+                                            <li>Crear nuevos proyectos con la configuración base (Tailwind, fuentes,
+                                                paleta de colores) lista para trabajar.</li>
+                                                <li>Creación de bases de datos en Sheets conectadas a landings para actualizar contenidos recurrentes.</li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./maquetacion/assets/svg/plus-circle.svg" alt=""
+                                class="faq-icon w-7 h-7 shrink-0 transition-transform">
+                        </div>
+                    </div>
+                    <!-- pregunta 5 -->
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="flex items-center justify-between gap-4">
+                            <div>
+                                <h3>
+                                    5. Escalamiento
+                                </h3>
+                                <div class="faq-answer hidden mt-3 flex flex-col gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <h4>
+                                            ¿En qué situaciones escalarías un problema al Web
+                                            Master Senior o al Project Manager?
+                                        </h4>
+                                        <ul>
+                                            <li>Si el problema impacta tiempos generales del proyecto.</li>
+                                            <li>Si se requiere cambios de prioridades.</li>
+                                            <li>Si es una situación que se repite constantemente y no se puede
+                                                solucionar con la comunicación directa.</li>
+                                            <li>Si son solicitudes que van en contra de politicas internas.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h4>¿Cuándo intentarías resolverlo tú primero?</h4>
+                                        <ul>
+                                            <li>Si puedo proponer una solución propia.</li>
+                                            <li>Si puedo solucionarlo investigando o revisando documentación.</li>
+                                            <li>Que se encuentre dentro de mi capacidad de decisión.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./maquetacion/assets/svg/plus-circle.svg" alt=""
+                                class="faq-icon w-7 h-7 shrink-0 transition-transform">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Boton volver arriba -->
+        <button id="btn-top" class="btn-scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+            <img src="./maquetacion/assets/svg/arriba.svg" alt="Volver arriba" class="w-6 h-6">
+        </button>
+    </main>
+
+    <!-- Section Footer -->
+    <footer class="bg-gris-100 py-2">
+        <div class="container-main">
+            <span class="text-xs text-white font-dv-italic">
+              Nataly Bernal - WMJ - 2026
+            </span>
+
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script>
+        function toggleFaq(item) {
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+            const isOpen = !answer.classList.contains('hidden');
+
+            // Cerrar todos
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+            document.querySelectorAll('.faq-icon').forEach(i => {
+                i.src = './maquetacion/assets/svg/plus-circle.svg';
+            });
+
+            // Toggle actual
+            if (!isOpen) {
+                answer.classList.remove('hidden');
+                icon.src = './maquetacion/assets/svg/menos-circle.svg';
+            }
+        }
+
+        const btnTop = document.getElementById('btn-top');
+        window.addEventListener('scroll', () => {
+            btnTop.classList.toggle('visible', window.scrollY > 300);
+        });
+    </script>
+</body>
+
+</html>
