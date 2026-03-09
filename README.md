@@ -1,5 +1,3 @@
-Entrega – Prueba Web Master Jr
-
 Estructura del proyecto
 
 El proyecto está organizado para facilitar la navegación y revisión técnica.
